@@ -1,4 +1,8 @@
-
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
 #minhaDiv{
     position: fixed;
     width: 18%;
@@ -17,10 +21,12 @@
 #img1{
     position: absolute;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 20px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    width: 100%;
     }
     #img2{
         position: absolute;
         box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 20px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        width: 100%;
     }
     .button {
         display: inline-block;
@@ -37,7 +43,7 @@
         box-shadow: 0 9px #999;
         position: absolute;
         left: 21%;
-        top: 33%;
+        top: 41%;
         font-weight: bold;
         z-index: 1111111;
       }
@@ -54,18 +60,27 @@
 #example1 {
     padding: 10px;
     position: absolute;
-    top: 47%;
+    top: 49%;
     width: 99%;
   }
-  #img{
-      margin-left: 38%;
-      margin-top: 3%;
+  .img{
+    height: 175px;
+    width: 175px;
+    margin-top: 4%;
+      margin-left: 24%;
+      border-radius: 200px;
+      background-color: #62FF3F;
+  }
+  #perfilcab{
+    position: absolute;
+    top: -3%;
+    left: 29%;
   }
   #sovai{
     position: absolute;
-    top: 60%;
+    top: 110%;
     border: solid 1px black;
-    height: 270px;
+    height: 650px;
     width: 100%;
     margin: auto;
     background-image: url('tech2.gif');
@@ -78,9 +93,19 @@ h3{
     top: 200%;
 }
 h1{
-    font-size: 100%;
-    margin-left: 39%;
+    font-size: 25px;
+    text-align: center;
+    font-weight: normal;
+    margin-top: 8%;
     
+}
+
+#txtmenu:hover{
+    color: #62FF3F;
+    text-decoration: underline;
+    font-weight: bold;
+    transition: 600ms;
+    font-size: 32px;
 }
 a{
     color: black;
@@ -94,4 +119,544 @@ left: 0%;
 width: 4%;
 z-index: 11111111;
 border: 0cm;
+}
+#titulo{
+    margin-left: 41%;
+    font-size: 50px;
+    font-weight: bold;
+    color: #62FF3F;
+}
+#descri{
+    font-size: 25px;
+    margin-left: 20%;
+}
+#roda{
+background-color: #CFFFE0;
+width: 100%;
+height: 20%;
+margin-top: 70%;
+}
+#ftperf{
+    position: absolute;
+    left: 5%;
+    top:55%;
+}
+#perfil{
+position:absolute;
+top: 85%;
+border: 1px;
+left: 3%;
+}
+
+
+.container {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.container .card {
+    position: relative;
+    min-width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    border-radius: 4px;
+    text-align: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+.container .card:nth-child(1) {
+    animation: zoom 0.4s ease-in-out forwards;
+}
+
+.container .card:nth-child(2) {
+    animation: zoom 0.4s ease-in-out forwards;
+    animation-delay: 0.2s;
+}
+
+.container .card:nth-child(3) {
+    animation: zoom 0.4s ease-in-out forwards;
+    animation-delay: 0.4s;
+}
+
+@keyframes zoom {
+    to {
+        transform: scale(1);
+    }
+}
+
+.container .card:hover {
+    margin-top: -10px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .5);
+}
+
+.container .card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, .03);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.percent {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 50px #000;
+    z-index: 1000;
+
+}
+
+.percent .number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.percent .number h2 {
+    color: white;
+    font-weight: 500;
+    font-size: 30px;
+    transition: 0.5s;
+}
+
+.card:hover .percent .number h2 {
+    color: #fff;
+    font-size: 50px;
+}
+
+.percent .number h2 span {
+    font-size: 24px;
+    color: #777;
+    transition: 0.5s;
+}
+
+.card:hover .percent .number h2 span {
+    color: #fff;
+}
+
+.text {
+    position: relative;
+    color: #777;
+    margin: 20px;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.card:hover .text {
+    color: #fff;
+}
+
+svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    z-index: 1000;
+}
+
+svg circle {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #191919;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+}
+
+svg circle:nth-child(2) {
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+}
+
+.card:nth-child(1) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 90) / 100);
+    stroke: #00ff43;
+
+}
+
+.card:nth-child(2) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 85) / 100);
+    stroke: #CFFFE0;
+
+}
+
+.card:nth-child(3) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 60) / 100);
+    stroke: #F3FFC4;
+
+}
+      
+
+
+
+
+
+.container2 {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.container2 .card2 {
+    position: relative;
+    min-width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    border-radius: 4px;
+    text-align: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+.container2 .card2:nth-child(1) {
+    animation: zoom 0.4s ease-in-out forwards;
+}
+
+.container2 .card2:nth-child(2) {
+    animation: zoom 0.4s ease-in-out forwards;
+    animation-delay: 0.2s;
+}
+
+.container2 .card2:nth-child(3) {
+    animation: zoom 0.4s ease-in-out forwards;
+    animation-delay: 0.4s;
+}
+
+@keyframes zoom {
+    to {
+        transform: scale(1);
+    }
+}
+
+.container2 .card2:hover {
+    margin-top: -10px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .5);
+}
+
+.container2 .card2:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, .03);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.percento {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 50px #000;
+    z-index: 1000;
+
+}
+
+.percento .number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.percent0 .number h2 {
+    color: white;
+    font-weight: 500;
+    font-size: 30px;
+    transition: 0.5s;
+}
+
+.card2:hover .percento .number h2 {
+    color: #fff;
+    font-size: 50px;
+}
+
+.percent2 .number h2 span {
+    font-size: 24px;
+    color: wheat;
+    transition: 0.5s;
+}
+
+.card2:hover .percento .number h2 span {
+    color: #fff;
+}
+
+.text {
+    position: relative;
+    color: white;
+    margin: 20px;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.card2:hover .text {
+    color: #fff;
+}
+
+svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    z-index: 1000;
+}
+
+svg circle {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #191919;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+}
+
+svg circle:nth-child(2) {
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+}
+
+.card2:nth-child(1) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 90) / 100);
+    stroke: #00ff43;
+
+}
+
+.card2:nth-child(2) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 85) / 100);
+    stroke: #CFFFE0;
+
+}
+
+.card2:nth-child(3) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 50) / 100);
+    stroke: #F3FFC4;
+
+}
+#graf2{
+    position: absolute;
+    top: 127%;
+    left: 50%;
+    color: white;
+}
+.text2 {
+    position: relative;
+    color: white;
+    margin: 10px;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+#minhas{
+color: #62FF3F;
+text-align: center;
+font-size: 45px;
+}
+#cole{
+    position: absolute;
+    top: 85%;
+    left: 18%;
+}
+#txtescola{
+font-size: 20px;
+font-weight: bold;
+}
+#textohab{
+    color: white;
+    position: absolute;
+    top: 160%;
+left: 2%;
+font-size: 23px;
+font-weight: bold;
+}
+.w3-container{
+position: absolute;
+top: 200%;
+}
+.content3{
+    position: absolute;
+    top: 200%;
+    height: 520px;
+    width: 935px;
+    border-radius: 20px;
+    overflow: hidden;
+    left: 25%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 20px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.navegar{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex; 
+}
+.bar{
+    width: 70px;
+    height: 17px;
+    border: 2px solid #62FF3F;
+    margin: 6px;
+    border-radius: 5px;
+    cursor: pointer ;
+    transition: 400ms;
+}
+.bar:hover{
+    background-color: #62FF3F;
+}
+input{
+    display: none;
+}
+.slides3{
+    display: flex;
+    width: 500%;
+    height: 100%;
+}
+.slide{
+    width: 20%;
+    transition: 400ms;
+}
+.slide img{
+    width: 100%;
+    height:100% ;
+}
+#slide1:checked ~ .s1{
+    margin-left: 0%;
+}
+#slide2:checked ~ .s1{
+    margin-left: -20%;
+}
+#slide3:checked ~ .s1{
+    margin-left: -40%;
+}
+#slide4:checked ~ .s1{
+    margin-left: -60%;
+}
+#slide5:checked ~ .s1{
+    margin-left: -80%;
+}
+#Indica{
+    color: #62FF3F;
+    position: absolute;
+    font-size: 45px;
+    font-weight: bold;
+    top: 182%;
+    left: 45%;
+}
+#repertorio{
+    width: 100%;
+    position: absolute;
+    top: 270%;
+}
+#reper{
+    margin-left: 63%;
+    transform: translate(-50%);
+    color: #62FF3F;
+    font-size: 45px;
+    font-weight: bold;
+}
+.content4{
+    position: absolute;
+    height: 520px;
+    width: 935px;
+    border-radius: 20px;
+    overflow: hidden;
+    left: 25%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 20px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.navegar2{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex; 
+}
+.bar2{
+    width: 70px;
+    height: 17px;
+    border: 2px solid #62FF3F;
+    margin: 6px;
+    border-radius: 5px;
+    cursor: pointer ;
+    transition: 400ms;
+}
+.bar2:hover{
+    background-color: #62FF3F;
+}
+input{
+    display: none;
+}
+.slides4{
+    display: flex;
+    width: 500%;
+    height: 100%;
+}
+.slide2{
+    width: 20%;
+    transition: 400ms;
+}
+.slide2 img{
+    width: 100%;
+    height:100% ;
+}
+#slide6:checked ~ .s2{
+    margin-left: 0%;
+}
+#slide7:checked ~ .s2{
+    margin-left: -20%;
+}
+#slide8:checked ~ .s2{
+    margin-left: -40%;
+}
+#slide9:checked ~ .s2{
+    margin-left: -60%;
+}
+#slide10:checked ~ .s2{
+    margin-left: -80%;
+}
+#legenda{ 
+    position: absolute;
+    top: 70%;
+    font-size: 20px;
+    color: #62FF3F;
+    z-index: 111111;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 25%;
+    height: 100%;
 }
